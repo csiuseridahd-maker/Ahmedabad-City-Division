@@ -20,137 +20,198 @@
             color: #222;
         }
 
-        /* ================= TOP HEADER ================= */
+
+        /* =====================================================
+           TOP RED HEADER
+        ===================================================== */
 
         .header {
             position: relative;
-            background: linear-gradient(135deg, #b40000, #d71920);
+
+            background: linear-gradient(
+                135deg,
+                #a80000,
+                #d71920
+            );
+
             color: white;
-            padding: 28px 120px 28px 25px;
-            text-align: center;
-            box-shadow: 0 3px 12px rgba(0, 0, 0, 0.20);
-        }
 
-        /* INDIA POST LOGO - TOP RIGHT */
-
-        .logo-container {
-            position: absolute;
-            top: 18px;
-            right: 30px;
-
-            width: 85px;
-            height: 85px;
-
-            background: white;
-            border-radius: 50%;
+            min-height: 105px;
 
             display: flex;
             align-items: center;
             justify-content: center;
 
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+            padding: 20px 130px 20px 20px;
+
+            box-shadow:
+                0 3px 12px rgba(0, 0, 0, 0.20);
         }
 
+
+        /* =====================================================
+           AHMEDABAD CITY DIVISION - TOP CENTRE
+        ===================================================== */
+
+        .division-title {
+
+            text-align: center;
+
+            font-size: 30px;
+
+            font-weight: 700;
+
+            letter-spacing: 0.5px;
+
+            text-shadow:
+                0 2px 4px rgba(0,0,0,0.20);
+        }
+
+
+        /* =====================================================
+           INDIA POST LOGO - TOP RIGHT
+        ===================================================== */
+
+        .logo-container {
+
+            position: absolute;
+
+            top: 12px;
+
+            right: 30px;
+
+            width: 80px;
+
+            height: 80px;
+
+            background: white;
+
+            border-radius: 50%;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            border: 3px solid white;
+
+            box-shadow:
+                0 3px 10px rgba(0,0,0,0.25);
+        }
+
+
         .logo {
-            width: 72px;
-            height: 72px;
+
+            width: 68px;
+
+            height: 68px;
+
             object-fit: contain;
         }
 
-        .header h1 {
-            margin: 2px 0 5px;
-            font-size: 30px;
-            font-weight: 700;
-        }
 
-        .header h2 {
-            margin: 5px 0;
-            font-size: 21px;
-            font-weight: 500;
-        }
-
-        .header p {
-            margin: 7px 0;
-            font-size: 15px;
-        }
-
-        .contact {
-            display: inline-block;
-            margin-top: 8px;
-            padding: 8px 20px;
-
-            border-radius: 20px;
-
-            background: rgba(255,255,255,0.18);
-            border: 1px solid rgba(255,255,255,0.35);
-
-            font-size: 15px;
-        }
-
-
-        /* ================= MAIN CONTAINER ================= */
+        /* =====================================================
+           MAIN CONTAINER
+        ===================================================== */
 
         .container {
+
             width: 92%;
+
             max-width: 750px;
-            margin: 35px auto;
+
+            margin: 35px auto 45px;
         }
 
+
+        /* =====================================================
+           QUICK LINKS TITLE
+        ===================================================== */
+
         .page-title {
+
             text-align: center;
+
             margin-bottom: 25px;
         }
 
+
         .page-title h2 {
+
             margin: 0;
+
             color: #b40000;
+
             font-size: 28px;
+
+            font-weight: 700;
         }
 
+
         .page-title p {
+
             margin-top: 7px;
+
             color: #666;
+
             font-size: 15px;
         }
 
 
-        /* ================= SECTION ================= */
+        /* =====================================================
+           SECTION
+        ===================================================== */
 
         .section {
+
             background: white;
 
             margin: 20px 0;
+
             padding: 22px;
 
             border-radius: 14px;
 
-            box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+            box-shadow:
+                0 3px 12px rgba(0,0,0,0.08);
 
             border-left: 5px solid #d71920;
         }
 
+
         .section-title {
+
             display: flex;
+
             align-items: center;
+
             gap: 10px;
 
             color: #b40000;
 
             font-size: 21px;
+
             font-weight: 700;
 
             margin-bottom: 17px;
         }
 
+
         .section-number {
+
             display: flex;
+
             align-items: center;
+
             justify-content: center;
 
             width: 32px;
+
             height: 32px;
 
             background: #d71920;
+
             color: white;
 
             border-radius: 50%;
@@ -159,10 +220,14 @@
         }
 
 
-        /* ================= LINKS ================= */
+        /* =====================================================
+           LINKS
+        ===================================================== */
 
         .link {
+
             display: flex;
+
             align-items: center;
 
             background: #f8f8f8;
@@ -170,25 +235,33 @@
             border: 1px solid #e0e0e0;
 
             padding: 14px 16px;
+
             margin: 10px 0;
 
             border-radius: 9px;
 
             text-decoration: none;
+
             color: #222;
 
             font-size: 16px;
+
             font-weight: 500;
 
             transition: all 0.25s ease;
         }
 
+
         .link-icon {
+
             width: 35px;
+
             font-size: 19px;
         }
 
+
         .link-arrow {
+
             margin-left: auto;
 
             font-size: 19px;
@@ -196,59 +269,101 @@
             color: #d71920;
         }
 
+
         .link:hover {
+
             background: #d71920;
+
             color: white;
 
             border-color: #d71920;
 
             transform: translateX(4px);
 
-            box-shadow: 0 4px 10px rgba(215,25,32,0.25);
+            box-shadow:
+                0 4px 10px rgba(215,25,32,0.25);
         }
 
+
         .link:hover .link-arrow {
+
             color: white;
         }
 
 
-        /* ================= BOTTOM FOOTER ================= */
+        /* =====================================================
+           BOTTOM OFFICE INFORMATION
+        ===================================================== */
 
         .footer {
-            margin-top: 40px;
 
-            padding: 28px 15px;
-
-            background: linear-gradient(135deg, #b40000, #d71920);
+            background: linear-gradient(
+                135deg,
+                #a80000,
+                #d71920
+            );
 
             color: white;
 
             text-align: center;
 
-            box-shadow: 0 -3px 10px rgba(0,0,0,0.15);
+            padding: 28px 20px 20px;
+
+            box-shadow:
+                0 -3px 10px rgba(0,0,0,0.15);
         }
+
 
         .footer-title {
-            font-size: 19px;
-            font-weight: bold;
 
-            margin-bottom: 8px;
+            font-size: 19px;
+
+            font-weight: 700;
+
+            margin-bottom: 10px;
         }
 
-        .footer p {
-            margin: 5px 0;
+
+        .footer-address {
+
+            font-size: 15px;
+
+            line-height: 1.6;
+
+            margin: 5px auto;
+
+            max-width: 850px;
+        }
+
+
+        .footer-contact {
+
+            display: inline-block;
+
+            margin-top: 8px;
+
+            padding: 7px 20px;
+
+            border-radius: 20px;
+
+            background: rgba(255,255,255,0.15);
+
+            border: 1px solid rgba(255,255,255,0.35);
 
             font-size: 14px;
 
-            opacity: 0.95;
+            font-weight: 600;
         }
 
+
         .copyright {
-            margin-top: 15px;
+
+            margin-top: 18px;
 
             padding-top: 12px;
 
-            border-top: 1px solid rgba(255,255,255,0.3);
+            border-top:
+                1px solid rgba(255,255,255,0.30);
 
             font-size: 12px;
 
@@ -256,69 +371,116 @@
         }
 
 
-        /* ================= MOBILE ================= */
+        /* =====================================================
+           MOBILE RESPONSIVE
+        ===================================================== */
 
         @media (max-width: 600px) {
 
             .header {
-                padding: 20px 90px 20px 10px;
+
+                min-height: 90px;
+
+                padding:
+                    18px 85px 18px 10px;
             }
+
+
+            .division-title {
+
+                font-size: 21px;
+            }
+
 
             .logo-container {
-                width: 65px;
-                height: 65px;
 
-                right: 15px;
-                top: 15px;
+                width: 62px;
+
+                height: 62px;
+
+                right: 14px;
+
+                top: 14px;
             }
+
 
             .logo {
-                width: 55px;
-                height: 55px;
+
+                width: 52px;
+
+                height: 52px;
             }
 
-            .header h1 {
-                font-size: 23px;
-            }
-
-            .header h2 {
-                font-size: 17px;
-            }
-
-            .header p {
-                font-size: 12px;
-            }
 
             .container {
+
                 width: 94%;
-                margin: 25px auto;
+
+                margin-top: 25px;
             }
 
+
+            .page-title h2 {
+
+                font-size: 24px;
+            }
+
+
             .section {
+
                 padding: 18px;
             }
 
+
             .section-title {
+
                 font-size: 19px;
             }
 
+
             .link {
+
                 font-size: 15px;
+
                 padding: 13px;
+            }
+
+
+            .footer-title {
+
+                font-size: 17px;
+            }
+
+
+            .footer-address {
+
+                font-size: 13px;
             }
 
         }
 
     </style>
+
 </head>
 
 
 <body>
 
 
-<!-- ================= HEADER ================= -->
+<!-- =====================================================
+     TOP RED HEADER
+===================================================== -->
 
 <header class="header">
+
+
+    <!-- AHMEDABAD CITY DIVISION - CENTRE -->
+
+    <div class="division-title">
+
+        Ahmedabad City Division
+
+    </div>
 
 
     <!-- INDIA POST LOGO - TOP RIGHT -->
@@ -333,29 +495,13 @@
 
     </div>
 
-
-    <h1>India Post</h1>
-
-    <h2>Ahmedabad City Division</h2>
-
-    <p>
-        Senior Superintendent of Post Offices
-    </p>
-
-    <p>
-        Navrangpura HO Building, 1st Floor,
-        Ahmedabad - 380 009
-    </p>
-
-    <div class="contact">
-        ☎ &nbsp; 079-2457785
-    </div>
-
 </header>
 
 
 
-<!-- ================= MAIN CONTENT ================= -->
+<!-- =====================================================
+     MAIN CONTENT
+===================================================== -->
 
 <main class="container">
 
@@ -372,7 +518,9 @@
 
 
 
-    <!-- ================= MMU ================= -->
+    <!-- =================================================
+         MMU
+    ================================================= -->
 
     <div class="section">
 
@@ -433,7 +581,9 @@
 
 
 
-    <!-- ================= BD ================= -->
+    <!-- =================================================
+         BD
+    ================================================= -->
 
     <div class="section">
 
@@ -464,7 +614,9 @@
 
 
 
-    <!-- ================= ESTABLISHMENT ================= -->
+    <!-- =================================================
+         ESTABLISHMENT
+    ================================================= -->
 
     <div class="section">
 
@@ -498,29 +650,40 @@
 
 
 
-<!-- ================= FOOTER ================= -->
+<!-- =====================================================
+     BOTTOM CENTRE OFFICE DETAILS
+===================================================== -->
 
 <footer class="footer">
 
+
     <div class="footer-title">
-        Ahmedabad City Division
+
+        Senior Superintendent of Post Offices
+
     </div>
 
-    <p>
-        Senior Superintendent of Post Offices
-    </p>
 
-    <p>
-        Navrangpura HO Building, 1st Floor,
+    <div class="footer-address">
+
+        1st Floor, Navrangpura HO Building,
+        Ahmedabad City Division,
         Ahmedabad - 380 009
-    </p>
 
-    <p>
-        ☎ 079-2457785
-    </p>
+    </div>
+
+
+    <div class="footer-contact">
+
+        ☎ &nbsp; 079-24577851
+
+    </div>
+
 
     <div class="copyright">
+
         © 2026 Department of Posts, Government of India
+
     </div>
 
 </footer>
