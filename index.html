@@ -5,138 +5,527 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Ahmedabad City Division</title>
+    <title>Ahmedabad City Division | India Post</title>
 
     <style>
 
+        * {
+            box-sizing: border-box;
+        }
+
         body {
             margin: 0;
-            font-family: Arial, sans-serif;
+            font-family: "Segoe UI", Arial, sans-serif;
             background: #f5f5f5;
-            text-align: center;
+            color: #222;
         }
+
+        /* ================= TOP HEADER ================= */
+
+        .header {
+            position: relative;
+            background: linear-gradient(135deg, #b40000, #d71920);
+            color: white;
+            padding: 28px 120px 28px 25px;
+            text-align: center;
+            box-shadow: 0 3px 12px rgba(0, 0, 0, 0.20);
+        }
+
+        /* INDIA POST LOGO - TOP RIGHT */
+
+        .logo-container {
+            position: absolute;
+            top: 18px;
+            right: 30px;
+
+            width: 85px;
+            height: 85px;
+
+            background: white;
+            border-radius: 50%;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+        }
+
+        .logo {
+            width: 72px;
+            height: 72px;
+            object-fit: contain;
+        }
+
+        .header h1 {
+            margin: 2px 0 5px;
+            font-size: 30px;
+            font-weight: 700;
+        }
+
+        .header h2 {
+            margin: 5px 0;
+            font-size: 21px;
+            font-weight: 500;
+        }
+
+        .header p {
+            margin: 7px 0;
+            font-size: 15px;
+        }
+
+        .contact {
+            display: inline-block;
+            margin-top: 8px;
+            padding: 8px 20px;
+
+            border-radius: 20px;
+
+            background: rgba(255,255,255,0.18);
+            border: 1px solid rgba(255,255,255,0.35);
+
+            font-size: 15px;
+        }
+
+
+        /* ================= MAIN CONTAINER ================= */
 
         .container {
-            max-width: 550px;
-            margin: 40px auto;
-            padding: 20px;
+            width: 92%;
+            max-width: 750px;
+            margin: 35px auto;
         }
 
-        h1 {
-            margin-bottom: 5px;
+        .page-title {
+            text-align: center;
+            margin-bottom: 25px;
         }
 
-        .subtitle {
+        .page-title h2 {
+            margin: 0;
+            color: #b40000;
+            font-size: 28px;
+        }
+
+        .page-title p {
+            margin-top: 7px;
             color: #666;
-            margin-bottom: 30px;
+            font-size: 15px;
         }
+
+
+        /* ================= SECTION ================= */
 
         .section {
             background: white;
+
             margin: 20px 0;
-            padding: 20px;
-            border-radius: 12px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            padding: 22px;
+
+            border-radius: 14px;
+
+            box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+
+            border-left: 5px solid #d71920;
         }
 
         .section-title {
-            font-size: 22px;
-            font-weight: bold;
-            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            color: #b40000;
+
+            font-size: 21px;
+            font-weight: 700;
+
+            margin-bottom: 17px;
         }
 
+        .section-number {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            width: 32px;
+            height: 32px;
+
+            background: #d71920;
+            color: white;
+
+            border-radius: 50%;
+
+            font-size: 15px;
+        }
+
+
+        /* ================= LINKS ================= */
+
         .link {
-            display: block;
-            background: #eeeeee;
-            padding: 14px;
+            display: flex;
+            align-items: center;
+
+            background: #f8f8f8;
+
+            border: 1px solid #e0e0e0;
+
+            padding: 14px 16px;
             margin: 10px 0;
-            border-radius: 8px;
+
+            border-radius: 9px;
+
             text-decoration: none;
             color: #222;
-            font-size: 17px;
+
+            font-size: 16px;
+            font-weight: 500;
+
+            transition: all 0.25s ease;
+        }
+
+        .link-icon {
+            width: 35px;
+            font-size: 19px;
+        }
+
+        .link-arrow {
+            margin-left: auto;
+
+            font-size: 19px;
+
+            color: #d71920;
         }
 
         .link:hover {
-            background: #dddddd;
+            background: #d71920;
+            color: white;
+
+            border-color: #d71920;
+
+            transform: translateX(4px);
+
+            box-shadow: 0 4px 10px rgba(215,25,32,0.25);
+        }
+
+        .link:hover .link-arrow {
+            color: white;
+        }
+
+
+        /* ================= BOTTOM FOOTER ================= */
+
+        .footer {
+            margin-top: 40px;
+
+            padding: 28px 15px;
+
+            background: linear-gradient(135deg, #b40000, #d71920);
+
+            color: white;
+
+            text-align: center;
+
+            box-shadow: 0 -3px 10px rgba(0,0,0,0.15);
+        }
+
+        .footer-title {
+            font-size: 19px;
+            font-weight: bold;
+
+            margin-bottom: 8px;
+        }
+
+        .footer p {
+            margin: 5px 0;
+
+            font-size: 14px;
+
+            opacity: 0.95;
+        }
+
+        .copyright {
+            margin-top: 15px;
+
+            padding-top: 12px;
+
+            border-top: 1px solid rgba(255,255,255,0.3);
+
+            font-size: 12px;
+
+            opacity: 0.85;
+        }
+
+
+        /* ================= MOBILE ================= */
+
+        @media (max-width: 600px) {
+
+            .header {
+                padding: 20px 90px 20px 10px;
+            }
+
+            .logo-container {
+                width: 65px;
+                height: 65px;
+
+                right: 15px;
+                top: 15px;
+            }
+
+            .logo {
+                width: 55px;
+                height: 55px;
+            }
+
+            .header h1 {
+                font-size: 23px;
+            }
+
+            .header h2 {
+                font-size: 17px;
+            }
+
+            .header p {
+                font-size: 12px;
+            }
+
+            .container {
+                width: 94%;
+                margin: 25px auto;
+            }
+
+            .section {
+                padding: 18px;
+            }
+
+            .section-title {
+                font-size: 19px;
+            }
+
+            .link {
+                font-size: 15px;
+                padding: 13px;
+            }
+
         }
 
     </style>
 </head>
 
+
 <body>
 
-<div class="container">
 
-    <h1>Quick Links</h1>
+<!-- ================= HEADER ================= -->
 
-    <div class="subtitle">
+<header class="header">
+
+
+    <!-- INDIA POST LOGO - TOP RIGHT -->
+
+    <div class="logo-container">
+
+        <img
+            src="indiapost-logo.png"
+            alt="India Post Logo"
+            class="logo"
+        >
+
+    </div>
+
+
+    <h1>India Post</h1>
+
+    <h2>Ahmedabad City Division</h2>
+
+    <p>
+        Senior Superintendent of Post Offices
+    </p>
+
+    <p>
+        Navrangpura HO Building, 1st Floor,
+        Ahmedabad - 380 009
+    </p>
+
+    <div class="contact">
+        ☎ &nbsp; 079-2457785
+    </div>
+
+</header>
+
+
+
+<!-- ================= MAIN CONTENT ================= -->
+
+<main class="container">
+
+
+    <div class="page-title">
+
+        <h2>Quick Links</h2>
+
+        <p>
+            Important Online Services &amp; Departmental Resources
+        </p>
+
+    </div>
+
+
+
+    <!-- ================= MMU ================= -->
+
+    <div class="section">
+
+        <div class="section-title">
+
+            <span class="section-number">1</span>
+
+            MMU
+
+        </div>
+
+
+        <a
+            class="link"
+            href="https://docs.google.com/forms/d/e/1FAIpQLScuZOcWpQz6OjqUPxF2ypxg79277X8YRebwiEPSvDMizeHggg/viewform"
+            target="_blank"
+        >
+
+            <span class="link-icon">📋</span>
+
+            <span>MMU Google Form</span>
+
+            <span class="link-arrow">→</span>
+
+        </a>
+
+
+        <a
+            class="link"
+            href="https://docs.google.com/forms/d/e/1FAIpQLSesCE8mLz6Pb5NEkVydB8SBA2UscFjIQ1vq9YsmLCp9LvSvEQ/viewform"
+            target="_blank"
+        >
+
+            <span class="link-icon">📊</span>
+
+            <span>MMU Daily Report</span>
+
+            <span class="link-arrow">→</span>
+
+        </a>
+
+
+        <a
+            class="link"
+            href="https://docs.google.com/forms/d/e/1FAIpQLSfPQCV4zOLEhcf393If8T8khPc53RW1O5A1kYpTPQsEuVne4A/viewform"
+            target="_blank"
+        >
+
+            <span class="link-icon">🏦</span>
+
+            <span>Bank Strike Articles Details</span>
+
+            <span class="link-arrow">→</span>
+
+        </a>
+
+    </div>
+
+
+
+    <!-- ================= BD ================= -->
+
+    <div class="section">
+
+        <div class="section-title">
+
+            <span class="section-number">2</span>
+
+            BD
+
+        </div>
+
+
+        <a
+            class="link"
+            href="YOUR_TECHNO_URL"
+            target="_blank"
+        >
+
+            <span class="link-icon">💼</span>
+
+            <span>BD</span>
+
+            <span class="link-arrow">→</span>
+
+        </a>
+
+    </div>
+
+
+
+    <!-- ================= ESTABLISHMENT ================= -->
+
+    <div class="section">
+
+        <div class="section-title">
+
+            <span class="section-number">3</span>
+
+            Establishment
+
+        </div>
+
+
+        <a
+            class="link"
+            href="https://forms.gle/TehEPFxtcwPy5pyw9"
+            target="_blank"
+        >
+
+            <span class="link-icon">📄</span>
+
+            <span>Establishment</span>
+
+            <span class="link-arrow">→</span>
+
+        </a>
+
+    </div>
+
+
+</main>
+
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="footer">
+
+    <div class="footer-title">
         Ahmedabad City Division
     </div>
 
+    <p>
+        Senior Superintendent of Post Offices
+    </p>
 
-    <!-- MMU SECTION -->
+    <p>
+        Navrangpura HO Building, 1st Floor,
+        Ahmedabad - 380 009
+    </p>
 
-    <div class="section">
+    <p>
+        ☎ 079-2457785
+    </p>
 
-        <div class="section-title">
-            1. MMU
-        </div>
-
-        <a class="link"
-           href="https://docs.google.com/forms/d/e/1FAIpQLScuZOcWpQz6OjqUPxF2ypxg79277X8YRebwiEPSvDMizeHggg/viewform"
-           target="_blank">
-            MMU Google Form
-        </a>
-
-        <a class="link"
-           href="https://docs.google.com/forms/d/e/1FAIpQLSesCE8mLz6Pb5NEkVydB8SBA2UscFjIQ1vq9YsmLCp9LvSvEQ/viewform"
-           target="_blank">
-            MMU Daily Report
-        </a>
-
-        <a class="link"
-           href="https://docs.google.com/forms/d/e/1FAIpQLSfPQCV4zOLEhcf393If8T8khPc53RW1O5A1kYpTPQsEuVne4A/viewform"
-           target="_blank">
-            Bank Strike Articles Details
-        </a>
-
+    <div class="copyright">
+        © 2026 Department of Posts, Government of India
     </div>
 
+</footer>
 
-    <!-- TECHNO SECTION -->
-
-    <div class="section">
-
-        <div class="section-title">
-            2. BD
-        </div>
-
-        <a class="link"
-           href="YOUR_TECHNO_URL"
-           target="_blank">
-            BD
-        </a>
-
-    </div>
-
-
-    <!-- ESTABLISHMENT SECTION -->
-
-    <div class="section">
-
-        <div class="section-title">
-            3. Establishment
-        </div>
-
-        <a class="link"
-           href="https://forms.gle/TehEPFxtcwPy5pyw9"
-           target="_blank">
-            Establishment
-        </a>
-
-    </div>
-
-</div>
 
 </body>
+
 </html>
